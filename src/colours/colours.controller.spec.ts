@@ -12,7 +12,7 @@ describe('ColoursController', () => {
         ColoursService,
         {
           provide: 'ColourModel',
-          useValue: {}, // mock ColourModel
+          useValue: {},
         },
       ],
     }).compile();

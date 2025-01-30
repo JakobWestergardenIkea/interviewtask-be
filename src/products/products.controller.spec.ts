@@ -12,7 +12,7 @@ describe('ProductsController', () => {
         ProductsService,
         {
           provide: 'ProductModel',
-          useValue: {}, // mock implementation of ProductModel
+          useValue: {},
         },
       ],
     }).compile();

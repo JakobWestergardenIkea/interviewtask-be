@@ -10,7 +10,7 @@ describe('ProductsService', () => {
         ProductsService,
         {
           provide: 'ProductModel',
-          useValue: {}, // mock value for ProductModel
+          useValue: {},
         },
       ],
     }).compile();

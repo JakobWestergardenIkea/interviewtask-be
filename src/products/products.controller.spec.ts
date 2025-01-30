@@ -14,6 +14,14 @@ describe('ProductsController', () => {
           provide: 'ProductModel',
           useValue: {},
         },
+        {
+          provide: 'ColourModel',
+          useValue: {},
+        },
+        {
+          provide: 'ProductTypeModel',
+          useValue: {},
+        },
       ],
     }).compile();
 

@@ -12,6 +12,14 @@ describe('ProductsService', () => {
           provide: 'ProductModel',
           useValue: {},
         },
+        {
+          provide: 'ColourModel',
+          useValue: {},
+        },
+        {
+          provide: 'ProductTypeModel',
+          useValue: {},
+        },
       ],
     }).compile();
 

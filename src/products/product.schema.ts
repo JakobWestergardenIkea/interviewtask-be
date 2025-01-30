@@ -10,7 +10,7 @@ export class Product extends Document {
   type: string;
 
   @Prop({ required: true })
-  colors: string[];
+  colours: string[];
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);

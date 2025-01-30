@@ -2,14 +2,14 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ProductsModule } from './products/products.module';
 import { ColoursModule } from './colours/colours.module';
-import { TypesModule } from './types/types.module';
+import { ProductTypesModule } from './product-types/product-types.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/nest'), // Update with your actual MongoDB connection string
+    MongooseModule.forRoot('mongodb://localhost/nest'),
     ProductsModule,
     ColoursModule,
-    TypesModule,
+    ProductTypesModule,
   ],
   controllers: [],
   providers: [],

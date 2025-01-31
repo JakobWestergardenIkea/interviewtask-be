@@ -47,10 +47,10 @@ export class ProductsService {
     });
   }
 
-  async findAll(): Promise<{ id: string; name: string }[]> {
+  async findAll(): Promise<Product[]> {
     const products = await this.productModel.find().exec();
     return products.map((product) => {
-      return { id: product._id.toString(), name: product.name };
+      return product.toObject();
     });
   }
 

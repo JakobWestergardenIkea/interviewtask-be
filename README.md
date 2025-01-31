@@ -17,15 +17,9 @@ and
 $ yarn start
 ```
 
-## Run tests
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
+## TODO
+Add unit testing. Both negative and positive (test that it throws when id is not valid and when an object is not found)
+Add e2e tests.
+Add Users maybe so it is clear who has created a new Ikea product. Different roles (admins can add new colours and product types)
+Add productType props (description that could be inherited by products of that type). ProductType icon could also be relevant.
+Add colour hexcodes in database

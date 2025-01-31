@@ -47,8 +47,11 @@ export class ProductsService {
     });
   }
 
-  async findAll(): Promise<Product[]> {
-    return this.productModel.find().exec();
+  async findAll(): Promise<{ id: string; name: string }[]> {
+    const products = await this.productModel.find().exec();
+    return products.map((product) => {
+      return { id: product._id.toString(), name: product.name };
+    });
   }
 
   async findOne(id: string): Promise<Product> {

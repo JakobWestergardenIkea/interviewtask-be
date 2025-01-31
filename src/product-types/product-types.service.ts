@@ -14,10 +14,11 @@ export class ProductTypesService {
     createProductTypeDto: CreateProductTypeDto,
   ): Promise<ProductType> {
     const createdProductType = new this.productTypeModel(createProductTypeDto);
-    return createdProductType.save();
+    const savedProductType = await createdProductType.save();
+    return savedProductType.toObject();
   }
 
   async findAll(): Promise<ProductType[]> {
-    return this.productTypeModel.find().exec();
+    return this.productTypeModel.find().lean().exec();
   }
 }

@@ -10,10 +10,11 @@ export class ColoursService {
 
   async create(createColourDto: CreateColourDto): Promise<Colour> {
     const createdColour = new this.coloursModel(createColourDto);
-    return createdColour.save();
+    const savedColour = await createdColour.save();
+    return savedColour.toObject();
   }
 
   async findAll(): Promise<Colour[]> {
-    return this.coloursModel.find().exec();
+    return this.coloursModel.find().lean().exec();
   }
 }

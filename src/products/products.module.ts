@@ -7,7 +7,7 @@ import { Colour, ColourSchema } from '../colours/colours.schema';
 import {
   ProductType,
   ProductTypeSchema,
-} from 'src/product-types/product-type.schema';
+} from '../product-types/product-type.schema';
 
 @Module({
   imports: [

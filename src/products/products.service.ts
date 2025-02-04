@@ -44,11 +44,15 @@ export class ProductsService {
       name,
       colours: colours.map((colour) => colour.name),
       type: productType.name,
+      createdTime: new Date(),
     });
   }
 
   async findAll(): Promise<Product[]> {
-    const products = await this.productModel.find().exec();
+    const products = await this.productModel
+      .find()
+      .sort({ createdTime: -1 })
+      .exec(); 
     return products.map((product) => {
       return product.toObject();
     });

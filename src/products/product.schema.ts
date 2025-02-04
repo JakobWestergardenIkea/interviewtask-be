@@ -12,6 +12,9 @@ export class Product extends Document {
   @Prop({ required: true })
   colours: string[];
 
+  @Prop({ required: true, default: Date.now })
+  createdTime: Date;
+
   _id: Types.ObjectId;
 }
 

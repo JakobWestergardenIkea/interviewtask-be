@@ -23,4 +23,3 @@ $ yarn start
  - Add Users maybe so it is clear who has created a new Ikea product. Different roles (admins can add new colours and product types)
  - Add productType props (description that could be inherited by products of that type). ProductType icon could also be relevant
  - Add colour hexcodes in database
- -

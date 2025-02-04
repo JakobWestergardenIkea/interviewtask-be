@@ -17,6 +17,11 @@ and
 $ yarn start
 ```
 
+## Possible database change
+This backend could just as well utilize a relational database using PostgreSQL. In that case the data would be modeled as this ER diagram:
+![ER Diagram](er-diagram.jpg)
+
+
 ## TODO
  - Add more unit testing. Both negative and positive (test that it throws when id is not valid and when an object is not found)
  - Add more e2e tests

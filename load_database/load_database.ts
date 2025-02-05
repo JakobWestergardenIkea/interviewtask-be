@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import axios from 'axios';
 
-const baseApiUrl = 'http://localhost:3000/';
+const baseApiUrl = 'http://localhost:3002/';
 
 async function readFileAndPost(filePath: string, api: string) {
   const apiUrl = baseApiUrl + api;
